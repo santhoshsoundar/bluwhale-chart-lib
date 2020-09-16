@@ -5,7 +5,7 @@ import { curveMonotoneX } from "d3"
 import Chart from "./ChartComponent/Chart";
 
 function App() {
-  const dataSample_1 = [
+  const data = [
     { x: 0, y: 10 },
     { x: 1, y: 20 },
     { x: 2, y: 40 },
@@ -24,26 +24,26 @@ function App() {
   return (
     <div className="App">
         <Chart 
-          data={dataSample_1}
+          data={data}
           dimensions={chartDimentions}
           backgroundColor={"white"}
           type="line"
           interpolation={curveMonotoneX}
           xAccessor={d => d.x} 
           yAccessor={d => d.y}
-          xLabel={"sample line X"}
-          yLabel={"sample line y"}
+          xLabel={"line X"}
+          yLabel={"line y"}
         />
         <Chart 
-          data={dataSample_1}
+          data={data}
           dimensions={chartDimentions}
           color={"red"}
           backgroundColor={"white"}
           type="bar"
           xAccessor={d => d.x} 
           yAccessor={d => d.y}
-          xLabel={"sample bars X"}
-          yLabel={"sample bars y"}
+          xLabel={"bars X"}
+          yLabel={"bars y"}
         />
     </div>
   );
